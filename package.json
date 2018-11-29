@@ -6,7 +6,7 @@
         "rpx to vw",
         "rpx2vw"
     ],
-    "version": "0.0.1",
+    "version": "0.0.2",
     "publisher": "yuyang zheng",
     "engines": {
         "vscode": "^1.29.0"
@@ -33,7 +33,7 @@
             "type": "object",
             "title": "rpx2vw configure",
             "properties": {
-                "px2vw.toFixedNum": {
+                "rpx2vw.toFixedNum": {
                     "type": "number",
                     "default": 4,
                     "description": "rpx2vw 保留小数长度"
