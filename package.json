@@ -7,7 +7,7 @@
         "rpx2vw"
     ],
     "version": "0.0.2",
-    "publisher": "yuyang zheng",
+    "publisher": "zhengyuyang",
     "engines": {
         "vscode": "^1.29.0"
     },
@@ -25,10 +25,12 @@
     ],
     "main": "./out/extension",
     "contributes": {
-        "commands": [{
-            "command": "extension.sayHello",
-            "title": "Hello World"
-        }],
+        "commands": [
+            {
+                "command": "extension.sayHello",
+                "title": "Hello World"
+            }
+        ],
         "configuration": {
             "type": "object",
             "title": "rpx2vw configure",
