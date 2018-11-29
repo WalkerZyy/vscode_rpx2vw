@@ -27,7 +27,7 @@ function activate(context: vscode.ExtensionContext) {
 
     let disposable = vscode.commands.registerTextEditorCommand('extension.rpx2vw', function (textEditor, edit) {
         const doc = textEditor.document;
-        let selection = textEditor.selection;
+        let selection: vscode.Selection | vscode.Range = textEditor.selection;
 
         if (selection.isEmpty) {
             const start = new vscode.Position(0, 0);

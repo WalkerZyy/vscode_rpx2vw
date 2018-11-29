@@ -24,7 +24,7 @@ class Process {
     }
     rpx2vw(text) {
         const rpxValue = parseFloat(text);
-        let vw = +(rpxValue / 750 * 100).toFixed(this.config.toFixedNum) + 'vw';
+        let vw = +toFixed((rpxValue / 750 * 100), this.config.toFixedNum) + 'vw';
         return {
             rpx: text,
             rpxValue: rpxValue,
@@ -33,25 +33,8 @@ class Process {
     }
 }
 exports.default = Process;
-// module.exports = function() {
-//     this.regRpxAll = /([-]?[\d.]+)rpx/g;
-//     let _this = this;
-//     this.convertAll = function(text) {
-//         if (!text) return text;
-//         return text.replace(_this.regRpxAll, (word) => {
-//             const res = _this.rpx2vw(word);
-//             if (res) return res.vw;
-//             return word;
-//         });
-//     }
-//     this.rpx2vw = function(text) {
-//         const rpxValue = parseFloat(text);
-//         let vw = +(rpxValue / 750 * 100).toFixed(2) + 'vw';
-//         return {
-//             rpx: text,
-//             rpxValue: pxValue,
-//             vw: vw
-//         }
-//     }
-// }
+function toFixed(number, precision) {
+    let multiplier = Math.pow(10, precision + 1), wholeNumber = Math.floor(number * multiplier);
+    return (Math.round(wholeNumber / 10) * 10) / multiplier;
+}
 //# sourceMappingURL=process.js.map

@@ -1,6 +1,9 @@
 # rpx2vw README
 
-This is the README for your extension "rpx2vw". After writing up a brief description, we recommend including the following sections.
+it can help to cale the corresponding vw of rpx(used in wxapp) 
+帮助将微信小程序里的rpx转成对应vw
+4 decimal places by default
+默认精确到小数点后4位
 
 ## Features
 
